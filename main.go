@@ -1,30 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/ladygarnet00/playing-with-go/models"
+)
 
 func main() {
-
-	//Structs
-
-	type user struct {
-		ID        int
-		FirstName string
-		LastName  string
-	}
-
-	//long initialization
-	var u user
-	u.ID = 8
-	u.FirstName = "Carolina"
-	u.LastName = "Martinez"
-	fmt.Println(u)
-	fmt.Println(u.ID)
-
-	//short initialization
-	u2 := user{ID: 1,
-		FirstName: "Lechuga",
+	u := models.User{
+		ID:        2,
+		FirstName: "Carolina",
 		LastName:  "Martinez",
 	}
-	fmt.Println(u2)
 
+	fmt.Println(u)
 }
