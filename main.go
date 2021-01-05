@@ -6,28 +6,19 @@ import (
 
 func main() {
 
-	fmt.Println("Hello from module, Gophers")
+	//pointer
+	var firstName *string = new(string)
 
-	var i int
-	i = 42
-	fmt.Println(i)
+	*firstName = "carolina"
 
-	var f float32 = 3.14
-	fmt.Println(f)
+	fmt.Println(*firstName)
 
-	//implicit initialization
-	firstName := "Arthur"
-	fmt.Println(firstName)
+	secondName := "Carolina"
+	fmt.Println(secondName)
 
-	b := true
-	fmt.Println(b)
+	ptr := &secondName
+	fmt.Println(ptr, *ptr)
 
-	//(3+4i)
-	c := complex(3, 4)
-	fmt.Println(c)
-
-	//3 4
-	r, im := real(c), imag(c)
-	fmt.Println(r, im)
-
+	secondName = "Lechuga"
+	fmt.Println(ptr, *ptr)
 }
