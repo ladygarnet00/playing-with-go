@@ -1,30 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	//Slices (builded over arrays)
 
-	arr := [3]int{1, 2, 3}
+	//Maps
 
-	slice := arr[:]
+	m := map[string]int{"foo": 42}
 
-	fmt.Println(arr, slice)
+	fmt.Println(m)
+	fmt.Println(m["foo"])
 
-	arr[1] = 42
-	slice[2] = 27
+	m["foo"] = 27
+	fmt.Println(m["foo"])
 
-	fmt.Println(arr, slice)
-
-	slice2 := []int{1, 2, 3}
-	fmt.Println(slice2)
-
-	slice2 = append(slice2, 4, 3, 56)
-	fmt.Println(slice2)
-
-	s2 := slice2[1:]
-	s3 := slice2[:2]
-	s4 := slice2[1:2]
-
-	fmt.Println(s2, s3, s4)
+	delete(m, "foo")
+	fmt.Println(m)
 }
