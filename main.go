@@ -2,17 +2,36 @@ package main
 
 import "fmt"
 
+const pi = 3.14
+
+const (
+	first  = 1
+	second = "A"
+	third  = true
+)
+
+const (
+	a = iota + 4
+	b = 2 << iota
+	c = iota
+	d = iota
+)
+
+const (
+	f = iota + 4
+	g
+)
+
+const (
+	h = iota
+)
+
 func main() {
 
-	//Creating constants
+	//Using Iota and Constant expressions
+	fmt.Println(pi, first, second, third)
 
-	const pi = 3.1415
-	fmt.Println(pi)
-
-	const c = 3
-	fmt.Println(c + 3)
-	fmt.Println(c + 1.2)
-
-	const d int = 6
-	fmt.Println(float32(d) + 1.3)
+	fmt.Println(a, b, c, d)
+	fmt.Println(f, g)
+	fmt.Println(h)
 }
