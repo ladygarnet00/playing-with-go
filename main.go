@@ -2,36 +2,19 @@ package main
 
 import "fmt"
 
-const pi = 3.14
-
-const (
-	first  = 1
-	second = "A"
-	third  = true
-)
-
-const (
-	a = iota + 4
-	b = 2 << iota
-	c = iota
-	d = iota
-)
-
-const (
-	f = iota + 4
-	g
-)
-
-const (
-	h = iota
-)
-
 func main() {
+	//Arrays
 
-	//Using Iota and Constant expressions
-	fmt.Println(pi, first, second, third)
+	//verbose way
+	var array [3]int
+	array[0] = 1
+	array[1] = 2
+	array[2] = 3
 
-	fmt.Println(a, b, c, d)
-	fmt.Println(f, g)
-	fmt.Println(h)
+	fmt.Println(array)
+	fmt.Println(array[1])
+
+	//implicit initialization
+	array2 := [3]int{1, 2, 3}
+	fmt.Println(array2)
 }
