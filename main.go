@@ -1,21 +1,30 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 
-	//Maps
+	//Structs
 
-	m := map[string]int{"foo": 42}
+	type user struct {
+		ID        int
+		FirstName string
+		LastName  string
+	}
 
-	fmt.Println(m)
-	fmt.Println(m["foo"])
+	//long initialization
+	var u user
+	u.ID = 8
+	u.FirstName = "Carolina"
+	u.LastName = "Martinez"
+	fmt.Println(u)
+	fmt.Println(u.ID)
 
-	m["foo"] = 27
-	fmt.Println(m["foo"])
+	//short initialization
+	u2 := user{ID: 1,
+		FirstName: "Lechuga",
+		LastName:  "Martinez",
+	}
+	fmt.Println(u2)
 
-	delete(m, "foo")
-	fmt.Println(m)
 }
