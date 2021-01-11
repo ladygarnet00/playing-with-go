@@ -33,7 +33,7 @@ func main() {
 	port, err2 := startWebServerMultipleReturn(port)
 	fmt.Println(err2, port)
 
-	//if i dont need the first return value
+	//if i dont need the first return value. Ignore the first result
 	_, err3 := startWebServerMultipleReturn(port)
 	fmt.Println(err3)
 
