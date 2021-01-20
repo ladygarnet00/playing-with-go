@@ -1,2 +1,12 @@
 # playing-with-go
-testing golang tools
+Repository to test Golang library
+
+
+```bash
+go build .
+```
+
+
+```bash
+go run .
+```
