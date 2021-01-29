@@ -2,26 +2,42 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/ladygarnet00/playing-with-go/models"
 )
 
 func main() {
 
-	//Panic function - exception
-	println("starting web server")
+	u1 := models.User{
+		ID:        1,
+		FirstName: "Carolina",
+		LastName:  "Martinez",
+	}
 
-	panic("somethng bad just happend")
+	u2 := models.User{
+		ID:        2,
+		FirstName: "Juan",
+		LastName:  "Diaz",
+	}
 
-	println("web server started")
+	if u1.ID == u2.ID {
+		println("Same ID!")
+	} else if u1.FirstName == u2.FirstName {
+		println("Same first name")
+	} else if u1.LastName == u2.LastName {
+		println("Same last name")
+	} else {
+		println("Different users")
+	}
 
-	// loopTilConditionWithBreak()
-	// loopTilConditionWithContinue()
-	// conditionalLoopsWithPostClauses()
-	// infinitLoop()
-	// loopOverSlices()
+	if u1.ID != u2.ID {
+		println("Not same ID!")
+	} else {
+		println("Same Users")
+	}
 
-	//controllers.RegisterControllers()
-	//http.ListenAndServe(":3000", nil)
-	//fmt.Println("Serving at port 3000")
+	println(u1.ID)
+	println(u2.ID)
 
 }
 
