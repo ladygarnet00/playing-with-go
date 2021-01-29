@@ -6,11 +6,18 @@ import (
 
 func main() {
 
-	loopTilConditionWithBreak()
-	loopTilConditionWithContinue()
-	conditionalLoopsWithPostClauses()
-	infinitLoop()
-	loopOverSlices()
+	//Panic function - exception
+	println("starting web server")
+
+	panic("somethng bad just happend")
+
+	println("web server started")
+
+	// loopTilConditionWithBreak()
+	// loopTilConditionWithContinue()
+	// conditionalLoopsWithPostClauses()
+	// infinitLoop()
+	// loopOverSlices()
 
 	//controllers.RegisterControllers()
 	//http.ListenAndServe(":3000", nil)
